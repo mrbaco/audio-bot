@@ -26,9 +26,9 @@ async def start_handler(
 
     keyboard = []
     
-    for i in range(0, len(audios), 3):
+    for i in range(0, len(audios), 2):
         row = []
-        for audio in audios[i:i+3]:
+        for audio in audios[i:i+2]:
             button = InlineKeyboardButton(
                 text=audio.file_name,
                 callback_data=f'audio_{audio.id}'
